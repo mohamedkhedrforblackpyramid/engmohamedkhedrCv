@@ -1,16 +1,46 @@
-# engmohamedkhedrcv
+# Mohamed Omar Khedr – CV / Portfolio
 
-A new Flutter project.
+موقع تعريفي (ويب + موبايل) لـ Mohamed Khedr – Lead Mobile Developer.
 
-## Getting Started
+## الرابط (بعد النشر على GitHub Pages)
 
-This project is a starting point for a Flutter application.
+بعد رفع المشروع على GitHub وتفعيل GitHub Pages، الرابط سيكون:
 
-A few resources to get you started if this is your first Flutter project:
+**https://YOUR_USERNAME.github.io/engmohamedkhedrCv/**
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+(استبدل `YOUR_USERNAME` باسم مستخدمك في GitHub)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## تشغيل محلياً
+
+```bash
+flutter pub get
+flutter run -d chrome   # ويب
+# أو
+flutter run             # أي جهاز متصل
+```
+
+## بناء نسخة الويب للنشر
+
+```bash
+flutter build web --base-href "/engmohamedkhedrCv/"
+```
+
+الملفات الجاهزة للنشر في `build/web/`.
+
+## النشر على GitHub Pages (رابط يفتح من أي مكان)
+
+1. ارفع المشروع على GitHub (إن لم يكن مرفوعاً):
+   ```bash
+   git remote add origin https://github.com/YOUR_USERNAME/engmohamedkhedrCv.git
+   git push -u origin main
+   ```
+
+2. في GitHub: **Settings** → **Pages** → **Build and deployment**:
+   - **Source**: اختر **GitHub Actions**.
+
+3. عند أي **push** على الفرع `main` سيتم البناء والنشر تلقائياً.
+
+4. بعد دقائق، افتح الرابط:
+   **https://YOUR_USERNAME.github.io/engmohamedkhedrCv/**
+
+يمكنك مشاركة هذا الرابط من أي جهاز أو متصفح.
