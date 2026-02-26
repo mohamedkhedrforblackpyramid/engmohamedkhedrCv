@@ -29,18 +29,18 @@ flutter build web --base-href "/engmohamedkhedrCv/"
 
 ## النشر على GitHub Pages (رابط يفتح من أي مكان)
 
-1. ارفع المشروع على GitHub (إن لم يكن مرفوعاً):
-   ```bash
-   git remote add origin https://github.com/YOUR_USERNAME/engmohamedkhedrCv.git
-   git push -u origin main
-   ```
+1. في المستودع على GitHub اذهب إلى: **Settings** → **Pages** (من القائمة الجانبية).
 
-2. في GitHub: **Settings** → **Pages** → **Build and deployment**:
-   - **Source**: اختر **GitHub Actions**.
+2. تحت **Build and deployment** → **Source** اختر **Deploy from a branch**.
 
-3. عند أي **push** على الفرع `main` سيتم البناء والنشر تلقائياً.
+3. تحت **Branch** اختر **gh-pages** والمجلد **/ (root)** ثم **Save**.
 
-4. بعد دقائق، افتح الرابط:
-   **https://YOUR_USERNAME.github.io/engmohamedkhedrCv/**
+4. شغّل الـ workflow مرة واحدة:
+   - اذهب إلى تبويب **Actions**
+   - اختر **Deploy CV to gh-pages branch**
+   - اضغط **Run workflow** → **Run workflow**
 
-يمكنك مشاركة هذا الرابط من أي جهاز أو متصفح.
+5. انتظر 2–3 دقائق حتى يكتمل التشغيل، ثم افتح الرابط:
+   **https://mohamedkhedrforblackpyramid.github.io/engmohamedkhedrCv/**
+
+بعد ذلك، كل **push** على الفرع `main` سينشر الموقع تلقائياً.
