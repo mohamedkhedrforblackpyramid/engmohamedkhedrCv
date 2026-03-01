@@ -1,11 +1,11 @@
-# بديل: نشر على فرع gh-pages (اختر Deploy from a branch في الإعدادات)
-# الرابط: https://mohamedkhedrforblackpyramid.github.io/engmohamedkhedrCv/
+# بديل: نشر على فرع gh-pages (لو اخترت Deploy from a branch في Settings > Pages)
+# معطّل لأننا نستخدم Deploy CV to GitHub Pages (Source: GitHub Actions)
 name: Deploy CV to gh-pages branch
 
 on:
-  push:
-    branches: [main]
-  workflow_dispatch:
+  workflow_dispatch:  # تشغيل يدوي فقط (لا يعمل مع كل push)
+  # push:
+  #   branches: [main]
 
 permissions:
   contents: write

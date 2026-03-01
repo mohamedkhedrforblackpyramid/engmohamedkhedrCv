@@ -61,7 +61,7 @@ class CvData {
       company: 'AlexApps',
       location: 'Alexandria, Egypt',
       role: 'Flutter Developer',
-      period: 'Sep 2019 – Present',
+      period: '2019 – 2025',
       highlights: [
         'Delivered fintech, sales, healthcare, HR, university, and industrial SCADA applications.',
         'Managed full development lifecycle, optimized UI/UX, and app performance.',
@@ -93,9 +93,18 @@ class CvData {
     ),
   ];
 
-  static const String educationDegree = 'B.Sc. Software Engineering';
-  static const String educationSchool = 'AUA University';
-  static const String educationPeriod = '2014 – 2018';
+  static const List<EducationItem> education = [
+    EducationItem(
+      degree: 'B.Sc. Software Engineering',
+      school: 'Arab Academy for Science, Technology and Maritime Transport',
+      period: '2014 – 2018',
+    ),
+    EducationItem(
+      degree: 'M.Sc. Artificial Intelligence and Software Engineering',
+      school: 'Arab Academy for Science, Technology and Maritime Transport',
+      period: '2022 – Present',
+    ),
+  ];
 
   static const List<LanguageItem> languages = [
     LanguageItem(name: 'Arabic', level: 'Native'),
@@ -176,4 +185,16 @@ class LanguageItem {
   final String level;
 
   const LanguageItem({required this.name, required this.level});
+}
+
+class EducationItem {
+  final String degree;
+  final String school;
+  final String period;
+
+  const EducationItem({
+    required this.degree,
+    required this.school,
+    required this.period,
+  });
 }

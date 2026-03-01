@@ -150,28 +150,33 @@ class CvScreen extends StatelessWidget {
 
                 _SectionTitle('Education', accentColor),
                 const SizedBox(height: 12),
-                _Card(
-                  backgroundColor: cardColor,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '${CvData.educationDegree}, ${CvData.educationSchool}',
-                        style: GoogleFonts.inter(
-                          color: textWhite,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                        ),
+                ...CvData.education.map(
+                  (e) => Padding(
+                    padding: const EdgeInsets.only(bottom: 12),
+                    child: _Card(
+                      backgroundColor: cardColor,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '${e.degree}, ${e.school}',
+                            style: GoogleFonts.inter(
+                              color: textWhite,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 16,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            e.period,
+                            style: GoogleFonts.inter(
+                              color: accentColor,
+                              fontSize: 14,
+                            ),
+                          ),
+                        ],
                       ),
-                      const SizedBox(height: 4),
-                      Text(
-                        CvData.educationPeriod,
-                        style: GoogleFonts.inter(
-                          color: accentColor,
-                          fontSize: 14,
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
                 const SizedBox(height: 40),
