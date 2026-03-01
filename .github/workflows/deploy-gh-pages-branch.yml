@@ -3,9 +3,9 @@
 name: Deploy CV to gh-pages branch
 
 on:
-  workflow_dispatch:  # تشغيل يدوي فقط (لا يعمل مع كل push)
-  # push:
-  #   branches: [main]
+  workflow_dispatch:
+  push:
+    branches: [main]
 
 permissions:
   contents: write
