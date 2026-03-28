@@ -34,6 +34,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   google_fonts: ^6.2.1
   url_launcher: ^6.2.5
+  pdf: ^3.12.0
+  printing: ^5.14.3
 
 dev_dependencies:
   flutter_test:
@@ -58,7 +60,11 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/
+    - assets/profile.png
+    # Fonts at project root (not under assets/) so Flutter Web resolves paths as
+    # assets/fonts/... instead of assets/assets/fonts/...
+    - fonts/NotoSans-Regular.ttf
+    - fonts/NotoSans-Bold.ttf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

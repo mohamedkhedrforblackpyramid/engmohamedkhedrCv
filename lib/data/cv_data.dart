@@ -73,7 +73,10 @@ class CvData {
         'Sales App: Order tracking, customer management, reporting.',
         'Quicky Clean: Service booking & scheduling app with notifications.',
         'Pronto: On-demand service management platform.',
-        'Power Look: Healthcare operational management and reporting.',
+        'Power Look App: Web and mobile application specialized in the Internet of '
+            'Things (IoT) for providing and implementing solutions for safety, security, '
+            'and productivity of individuals within companies and organizations operating '
+            'in the Kingdom of Saudi Arabia.',
         'Healthcare App: Patient management, appointments, analytics.',
         'HR Management System: Attendance, leave, permission, task/project management, dashboards.',
         'E-Just University Booking: Lab booking, professor scheduling, student communication, analytics.',

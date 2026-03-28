@@ -1,7 +1,10 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:printing/printing.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../cv_pdf/cv_ats_pdf.dart';
 import '../data/cv_data.dart';
 
 class CvScreen extends StatelessWidget {
@@ -9,7 +12,6 @@ class CvScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final isWide = MediaQuery.sizeOf(context).width > 800;
     final padding = isWide ? 80.0 : 24.0;
     const accentColor = Color(0xFF0D9488); // Teal
@@ -37,7 +39,19 @@ class CvScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              child: isWide
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: IconButton(
+                      onPressed: () => _exportAtsPdf(context),
+                      icon: const Icon(Icons.picture_as_pdf_outlined),
+                      color: textWhite,
+                      tooltip: 'تحميل PDF (ATS)',
+                    ),
+                  ),
+                  isWide
                   ? Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -65,6 +79,8 @@ class CvScreen extends StatelessWidget {
                         ),
                       ],
                     ),
+                ],
+              ),
             ),
           ),
 
@@ -340,6 +356,22 @@ class CvScreen extends StatelessWidget {
     final uri = Uri.parse(url);
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri, mode: LaunchMode.externalApplication);
+    }
+  }
+
+  static Future<void> _exportAtsPdf(BuildContext context) async {
+    try {
+      final bytes = await CvAtsPdf.build();
+      await Printing.sharePdf(
+        bytes: bytes,
+        filename: 'Mohamed_Omar_Khedr_CV_ATS.pdf',
+      );
+    } catch (e) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('تعذّر إنشاء ملف PDF: $e')),
+        );
+      }
     }
   }
 }
