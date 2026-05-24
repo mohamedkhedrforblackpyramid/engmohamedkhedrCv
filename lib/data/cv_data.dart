@@ -7,16 +7,27 @@ class CvData {
   static const String phone = '+20 106 836 1867';
   static const String linkedIn = 'https://www.linkedin.com/in/mohamed-khedr-71bb41242/';
 
-  static const String summary = 
-      'Lead Flutter Developer with 6+ years of experience building scalable '
-      'cross-platform iOS & Android applications. Expert in SaaS, SCADA industrial '
-      'systems, fintech, healthcare, and dashboards. Skilled in Flutter, Dart, '
-      'Firebase, BLoC, Provider, RESTful APIs, payment integration, admin panel '
-      'development, and full App Store & Google Play deployment. Proven ability '
-      'to optimize performance, enhance UI/UX, and deliver enterprise-level solutions.';
+  static const String summary =
+      'Lead Mobile Developer with 6+ years of experience building scalable '
+      'cross-platform iOS & Android applications using Flutter, React Native, '
+      'and Kotlin Multiplatform. Expert in SaaS, SCADA industrial systems, '
+      'fintech, healthcare, and dashboards. Skilled in Dart, Kotlin, Swift, Java, '
+      'Clean Architecture, Firebase, BLoC, Provider, Riverpod, RESTful APIs, '
+      'payment integration, admin panel development, and full App Store & '
+      'Google Play deployment. Proven ability to optimize performance, enhance '
+      'UI/UX, and deliver enterprise-level solutions.';
 
   static const Map<String, List<String>> coreSkills = {
-    'Languages & Frameworks': ['Flutter', 'Dart', 'Clean Architecture', 'Swift', 'Java', 'Kotlin'],
+    'Languages & Frameworks': [
+      'Flutter',
+      'Dart',
+      'React Native',
+      'Kotlin Multiplatform',
+      'Clean Architecture',
+      'Swift',
+      'Java',
+      'Kotlin',
+    ],
     'State Management': ['BLoC', 'Provider', 'Riverpod', 'MobX'],
     'Backend & Database': ['RESTful APIs', 'Firebase (FCM, Auth, Firestore)', 'MySQL'],
     'Payments & Subscriptions': [
@@ -42,7 +53,7 @@ class CvData {
     ExperienceItem(
       company: 'Together Apps',
       location: 'Canada',
-      role: 'Lead Flutter Developer',
+      role: 'Lead Mobile Developer',
       period: 'Jan 2025 – Present',
       highlights: [
         'Led development of a large-scale multi-tenant SaaS platform with dashboards, '
@@ -60,7 +71,7 @@ class CvData {
     ExperienceItem(
       company: 'AlexApps',
       location: 'Alexandria, Egypt',
-      role: 'Flutter Developer',
+      role: 'Mobile Developer',
       period: '2019 – 2025',
       highlights: [
         'Delivered fintech, sales, healthcare, HR, university, and industrial SCADA applications.',
@@ -86,7 +97,7 @@ class CvData {
     ExperienceItem(
       company: 'Freelance',
       location: 'Saudi Arabia',
-      role: 'Flutter Developer',
+      role: 'Mobile Developer',
       period: 'Oct 2020 – Present',
       highlights: [
         'Delivered custom applications, fixed technical issues, optimized performance '
